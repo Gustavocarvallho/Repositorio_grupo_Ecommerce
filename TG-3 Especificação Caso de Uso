@@ -1,0 +1,81 @@
+Especificação de caso de uso	
+Identificador	UC01
+Nome	Login
+Atores	Cliente
+Sumário	O sistema deve permitir que o cliente faça login no site.
+Pré-condição	O cliente deve registrar-se primeiro.
+Pós-condição	-
+Pontos de Inclusão	-
+Pontos de Extensão	-
+	
+Especificação de caso de uso	
+Identificador	UC02
+Nome	Enviar aparelho
+Atores	Usuário
+Sumário	O sistema deve permitir que o cliente consiga enviar o aparelho para avaliação.
+Pré-condição	O cliente tem que identificar o modelo, a marca e o estado do aparelho.
+Pós-condição	O aparelho é enviado para avaliação.
+Pontos de Inclusão	Avaliar o estado do aparelho depois de enviado.
+Pontos de Extensão	-
+	
+Especificação de caso de uso	
+Identificador	UC03
+Nome	Avaliar de estado
+Atores	Funcionário
+Sumário	O funcionário tem que avaliar o estado do aparelho após ele ser enviado.
+Pré-condição	O cliente tem que ter enviado o aparelho.
+Pós-condição	O funcionário pode gerar desconto; voucher ou gerar valor equivalente de troca.
+Pontos de Inclusão	-
+Pontos de Extensão	-
+
+
+Especificação de caso de uso	
+Identificador	UC04
+Nome	Compra de produto
+Atores	Comprador 
+Sumário	O comprador deve utilizar o sistema para verificar disponibilidade do produto, definir quantidade a ser disponibilizada, determinar forma de pagamento (pagamento a vista ou à prazo, fazer distribuição, emitir nota e dar baixa na estoque.
+Pré-condição	O produto deve estar registrado.
+Pós-condição	-
+Pontos de Inclusão	UC04(Logar no Sistema)
+Pontos de Extensão	-
+	
+Fluxo Principal	
+Ações do Ator	Ações do Sistema
+	1. Sistema apresenta tela para login do comprador;
+2. Comprador efeteua login.	
+3. Comprador registra qual o tipo de compra quer fazer.	
+	4. Sistema verifica disponibilidade.
+	5. Sistema valida o produto.
+6. Comprador informa a quantidade.	
+	7. Sistema valida quantidade.
+8. Comprador confirma a soiicitação selecionando REGISTRAR PEDIDO.	
+	9. Gera pagamento.
+10. Comprador seleciona forma de pagamento.	
+	11. Sistema valida forma de pagamento.
+12. Comprador efetua pagamento.	
+	11. Sistema valida pagamento.
+	12. Sistema seperara pedido.
+	13. Sistema disponibiliza o produto para envio.
+	14. Sistema emite cupom fiscal.
+	15. Sistema registra saida de produto.
+16. Comprador recebe o produto.	
+	17. Sistema da baixa no sistema.
+	
+Fluxo Alternativo: Produto indisponível	
+Ações do Ator	Ações do Sistema
+	2.1. Sistema apresenta tela com outras opções de produto.
+2.2. Comprador informa interesse.	
+	2.3. sistema inclui pedido em lista de espera.
+2.4. Retorna ao passo 3.	
+	
+Fluxo de Exceção 1: Disponibilidade de quatidade de produtos	
+No passo 6, caso o número de produto seja  maior que 5, apresenta mensagem ('Quantidade sujeita a análise de disponibilidade.')	
+	
+Fluxo de Exceção 2: Entrega do produto	
+No passo 15, caso a entrega não seja efetivada, é disparado um alert para o comprador informando " tentativa de entrega 1, seu produto poderá ser entregue fora do prazo estipuado".	
+	
+	
+	
+	
+	
+	
